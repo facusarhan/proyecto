@@ -1,0 +1,17 @@
+@mixin mix-2 ($text) {
+    padding: 40px;
+    margin: ($text);
+}
+
+.amd {
+    @include mix-2(0);
+}
+.intel {
+    @include mix-2(10px)
+}
+.radeon {
+    @include mix-2(0)
+}
+.nvidia {
+    @include mix-2(10px)
+}
