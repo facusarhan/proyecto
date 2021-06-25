@@ -15,3 +15,26 @@
 .nvidia {
     @include mix-2(10px)
 }
+.img-amd {
+    img {
+        max-width: 100%; 
+    }
+}
+.img-intel {
+    img {
+        max-width: 100%; 
+
+    }
+}
+.img-radeon {
+    img {
+        max-width: 100%; 
+
+    }
+}
+.img-nvidia {
+    img {
+        max-width: 100%; 
+
+    }
+}

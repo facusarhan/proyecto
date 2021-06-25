@@ -40,6 +40,22 @@
   margin: 10px;
 }
 
+.img-amd img {
+  max-width: 100%;
+}
+
+.img-intel img {
+  max-width: 100%;
+}
+
+.img-radeon img {
+  max-width: 100%;
+}
+
+.img-nvidia img {
+  max-width: 100%;
+}
+
 .video {
   padding: 10px;
   margin: auto;
@@ -56,6 +72,10 @@
 .video h2 {
   color: black;
   text-align: center;
+}
+
+.youtube iframe {
+  max-width: 100%;
 }
 
 /* hola
