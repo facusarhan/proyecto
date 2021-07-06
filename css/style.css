@@ -150,6 +150,9 @@ div img {
 .NavBar a:hover{
     background: lime;
 }
+.NavBar div ul li a {
+ font-size: medium;
+}
 
 
 /* fin navbar */
