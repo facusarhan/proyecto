@@ -15,16 +15,18 @@
     width: 100%;
     height: 100px;
     text-align: center;
-    p {
-        color: nth($colores, 4);
-        text-align: center;
-        a:hover {
-            text-decoration: underline;
-        }
-    }
+    max-width: 100%;
     a {
         img {
            @include flex;
         }
+    }
+    .a:hover{
+        background: lime;
+      }
+    .a {
+        text-decoration: none;
+        color: white;
+        margin: 20px;
     }
 }

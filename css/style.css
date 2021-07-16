@@ -5,19 +5,21 @@
   width: 100%;
   height: 100px;
   text-align: center;
-}
-.footer p {
-  color: lightgray;
-  text-align: center;
-}
-.footer p a:hover {
-  text-decoration: underline;
+  max-width: 100%;
 }
 .footer a img {
   background-color: white;
   border-radius: 100%;
   text-align: center;
   width: 50px;
+}
+.footer .a:hover {
+  background: lime;
+}
+.footer .a {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
 }
 
 .amd {
