@@ -32,17 +32,11 @@ function handleChange () {
     let arrayFiltrado = [];
 
     if(checkedValue == "gamer"){
-​
-      arrayFiltrado = listaPcs.filter(producto => producto.tipo == "gamer");
-​
-    }else if (checkedValue == "edicion"){ 
-
-      arrayFiltrado = listaPcs.filter(producto => producto.tipo == "edicon");
-​
-    }else if(checkedValue == "estudiante") {
-
-      arrayFiltrado = listaPcs.filter(producto => producto.tipo == "estudiante");
-​
+        arrayFiltrado = listaPcs.filter(producto => producto.tipo == "gamer");
+    }else if (checkedValue == "edicion"){
+        arrayFiltrado = listaPcs.filter(producto => producto.tipo == "edicion");
+    }else if(checkedValue == "estudiante"){
+        arrayFiltrado = listaPcs.filter(producto => producto.tipo == "estudiante");
     }
 ​
     filtrarTabla(arrayFiltrado);
