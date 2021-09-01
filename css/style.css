@@ -207,5 +207,7 @@ div img {
 .transicion:hover {
   transform: scale(2);
 }
-
+#tablet{
+  width: 50%;
+}
 /* vidoas.html  */
