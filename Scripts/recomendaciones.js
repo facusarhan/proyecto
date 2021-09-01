@@ -25,12 +25,9 @@ elegirPorqueFiltrar.forEach(check => check.addEventListener("change", handleChan
 
 function handleChange () {
     cuerpoTabla.innerHTML = "";
-
     const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
     const checkedValue = checkeds.map(check => check.value);
-
     let arrayFiltrado = [];
-
     if(checkedValue == "gamer"){
         arrayFiltrado = listaPcs.filter(producto => producto.tipo == "gamer");
     }else if (checkedValue == "edicion"){
@@ -38,6 +35,5 @@ function handleChange () {
     }else if(checkedValue == "estudiante"){
         arrayFiltrado = listaPcs.filter(producto => producto.tipo == "estudiante");
     }
-​
     filtrarTabla(arrayFiltrado);
 }
