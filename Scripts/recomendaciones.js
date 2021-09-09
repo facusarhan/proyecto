@@ -36,7 +36,8 @@ $(document).ready(function(){
 
     elegirPorqueFiltrar.forEach(check => check.addEventListener("change", recomendaciones));
 
-    $("#vaciar").on("click", (arrayFiltrado).innerHTML = "");
+    $("#vaciar").on("click", (arrayFiltrado).innerHTML = ""); // nose como hacer que vacie el array que me queda para que no me sobre escriba 
+    
 });
 
 
