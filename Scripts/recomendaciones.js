@@ -1,5 +1,10 @@
 
 $(document).ready(function(){
+    
+    $("#vaciar").click( ()=> $("#mark").hide()); 
+    
+    $("#desplegar").click( ()=> $("#mark").slideDown("slow"));
+
 
     /* function completarTabla(){
         listaPcs.forEach(producto => {
@@ -36,9 +41,8 @@ $(document).ready(function(){
 
     elegirPorqueFiltrar.forEach(check => check.addEventListener("change", recomendaciones));
 
-    $("#vaciar").on("click", (arrayFiltrado).innerHTML = ""); // nose como hacer que vacie el array que me queda para que no me sobre escriba 
-    
 });
+
 
 
 
