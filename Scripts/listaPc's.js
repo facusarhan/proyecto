@@ -39,4 +39,9 @@ const listaPcs = [
         precio: 50000,
         componentes: "Ryzen 3 G, integrada, 8gb ram, 480gb ssd"
     },
+    {
+        tipo: "gamer",
+        precio: 650000,
+        componentes: "intel i9, Rtx 3090, 32gb ram, 2tb nvme"
+    },
 ];
