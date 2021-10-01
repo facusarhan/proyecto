@@ -18,16 +18,15 @@ function filtrarTabla(array){
 }
 
 let elegirPorqueFiltrar = document.querySelectorAll('input[type="radio"]');
-let elegirPorqueFiltrar2 = document.querySelectorAll('input[type="radio"]');
 
 //elegirPorqueFiltrar.forEach(check => console.log(check));
 
 elegirPorqueFiltrar.forEach(check => check.addEventListener("change", handleChange));
 
-let arrayFiltrado1 = []
 
 function handleChange () {
     cuerpoTabla.innerHTML = "";
+    let arrayFiltrado1 = [];
     const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
     const checkedValue = checkeds.map(check => check.value);
     if(checkedValue == "gamer"){
@@ -40,10 +39,12 @@ function handleChange () {
     filtrarTabla(arrayFiltrado1);
 }
 
-let arrayFiltrado2 = []
+
 
 function recomendacion1 () {
-    const checkeds = Array.from(elegirPorqueFiltrar2).filter(check => check.checked);
+    cuerpoTabla.innerHTML = "";
+    let arrayFiltrado2 = [];
+    const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
     const checkedValue = checkeds.map(check => check.value);
     if(checkedValue == "150"){
         arrayFiltrado2 = arrayFiltrado1.filter(producto => producto.precio < 150000);
