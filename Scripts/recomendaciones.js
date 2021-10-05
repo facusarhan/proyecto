@@ -1,5 +1,6 @@
-
 $(document).ready(function(){
+    $("#btnPresupuestos").click(()=> $("#section-index").fadeIn());
+    $("#btnEsconder").click(()=> $("#section-index").fadeOut());
 
     let cuerpoTabla = $("#cuerpo_tabla");
     
@@ -12,10 +13,15 @@ $(document).ready(function(){
     }
 
     let elegirPorqueFiltrar = document.querySelectorAll('input[type="radio"]');
-    
-    function recomendaciones () {
+
+    elegirPorqueFiltrar.forEach(check => check.addEventListener("change", handleChange));
+
+    elegirPorqueFiltrar.forEach(check => check.addEventListener("change", recomendacion));
+
+    let arrayFiltrado = [];
+
+    function handleChange () {
         cuerpoTabla.innerHTML = "";
-        let arrayFiltrado = [];
         const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
         const checkedValue = checkeds.map(check => check.value);
         if(checkedValue == "gamer"){
@@ -25,18 +31,20 @@ $(document).ready(function(){
         }else if(checkedValue == "estudiante"){
             arrayFiltrado = listaPcs.filter(producto => producto.tipo == "estudiante");
         }
-        filtrarTabla(arrayFiltrado);
-        let arrayFiltrado2 = [];
-        if(checkedValue == "150"){
-            arrayFiltrado2 = arrayFiltrado1.filter(producto => producto.precio < 150000);
-        }else if (checkedValue == "300"){
-            arrayFiltrado2 = arrayFiltrado1.filter(producto => producto.precio < 300000);
-        }else if(checkedValue == "301"){
-            arrayFiltrado2 = arrayFiltrado1.filter(producto => producto.precio > 300000);
-        }
-        filtrarTabla(arrayFiltrado2);    
     }
 
-    elegirPorqueFiltrar.forEach(check => check.addEventListener("change", recomendaciones));
-
+    function recomendacion (){
+        cuerpoTabla.innerHTML = "";
+        const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
+        const checkedValue = checkeds.map(check => check.value);
+        let arrayFiltrado1 = [];
+        if(checkedValue == "150"){
+            arrayFiltrado1 = arrayFiltrado.filter(producto => producto.precio <= 150000);
+        }else if (checkedValue == "300"){
+            arrayFiltrado1 = arrayFiltrado.filter(producto => producto.precio > 150000 && producto.precio < 300000);
+        }else if(checkedValue == "301"){
+            arrayFiltrado1 = arrayFiltrado.filter(producto => producto.precio > 300000);
+        }
+        filtrarTabla(arrayFiltrado1);
+    }
 });

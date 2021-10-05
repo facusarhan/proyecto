@@ -128,7 +128,9 @@ li{
 }
 
 /* secition index */
-
+.section-index{
+  display: none;
+}
 .section-index p{
   color: black;
 }
@@ -211,6 +213,7 @@ div img {
   width: 50%;
 }
 /* vidoas.html  */
-.mark{
-  display: none;
+.btnP{
+  margin-left: auto;
+  margin-right: auto;
 }
