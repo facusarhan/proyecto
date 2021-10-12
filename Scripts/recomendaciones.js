@@ -1,9 +1,11 @@
 $(document).ready(function(){
+    //caputuras de los eventos click de los botones
     $("#btnPresupuestos").click(()=> $("#section-index").fadeIn());
     $("#btnEsconder").click(()=> $("#section-index").fadeOut());
 
     let cuerpoTabla = $("#cuerpo_tabla");
     
+    // funcion para armar la tabla del array filtrado
     function filtrarTabla(array){
         array.forEach(producto => {
             let fila = document.createElement("tr");
@@ -20,6 +22,7 @@ $(document).ready(function(){
 
     let arrayFiltrado = [];
 
+    //funciones para filtar el array
     function handleChange () {
         cuerpoTabla.innerHTML = "";
         const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
