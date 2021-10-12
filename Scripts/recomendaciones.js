@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     let arrayFiltrado = [];
 
-    //funciones para filtar el array
+    //funciones para filtar el array de listaPcs
     function handleChange () {
         cuerpoTabla.innerHTML = "";
         const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
