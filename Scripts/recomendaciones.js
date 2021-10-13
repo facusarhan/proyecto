@@ -9,7 +9,7 @@ $(document).ready(function(){
     function filtrarTabla(array){
         array.forEach(producto => {
             let fila = document.createElement("tr");
-            fila.innerHTML = `<td>${producto.tipo}</td><td>$${producto.precio}</td><td>${producto.componentes}</td>`
+            fila.innerHTML = `<td>${producto.tipo}</td><td>$${producto.precio}</td><td>${producto.componentes}</td><td>${producto.presupuesto}</td>`
             cuerpoTabla.append(fila);
         })
     }
