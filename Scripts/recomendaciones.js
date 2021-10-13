@@ -3,7 +3,7 @@ $(document).ready(function(){
     $("#btnPresupuestos").click(()=> $("#section-index").fadeIn());
     $("#btnEsconder").click(()=> $("#section-index").fadeOut());
 
-    let cuerpoTabla = $("#cuerpo_tabla");
+    let cuerpoTabla = document.querySelector('#cuerpo_tabla');
     
     // funcion para armar la tabla del array filtrado
     function filtrarTabla(array){
@@ -24,7 +24,6 @@ $(document).ready(function(){
 
     //funciones para filtar el array de listaPcs
     function handleChange () {
-        cuerpoTabla.innerHTML = "";
         const checkeds = Array.from(elegirPorqueFiltrar).filter(check => check.checked);
         const checkedValue = checkeds.map(check => check.value);
         if(checkedValue == "gamer"){
